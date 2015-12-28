@@ -25,11 +25,25 @@
 	},
 	"minimum-stability": "dev",
 	"prefer-stable": true,
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/aleksip/patternlab-php-core"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/aleksip/patternengine-php-twig"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/aleksip/styleguidekit-twig-default"
+		}
+	],
 	"require": {
 		"php": ">=5.3.6",
-		"pattern-lab/core": "0.*",
-		"pattern-lab/patternengine-twig": "0.*",
-		"pattern-lab/styleguidekit-twig-default": "0.*"
+		"pattern-lab/core": "dev-shila-drupal-theme",
+		"pattern-lab/patternengine-twig": "dev-shila-drupal-theme",
+		"pattern-lab/styleguidekit-twig-default": "dev-shila-drupal-theme"
 	},
 	"scripts": {
 		"post-create-project-cmd": [
