@@ -43,7 +43,8 @@
 		"php": ">=5.3.6",
 		"pattern-lab/core": "dev-shila-drupal-theme",
 		"pattern-lab/patternengine-twig": "dev-shila-drupal-theme",
-		"pattern-lab/styleguidekit-twig-default": "dev-shila-drupal-theme"
+		"pattern-lab/styleguidekit-twig-default": "dev-shila-drupal-theme",
+		"aleksip/plugin-data-transform": "dev-master"
 	},
 	"scripts": {
 		"post-create-project-cmd": [
