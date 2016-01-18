@@ -37,6 +37,10 @@
 		{
 			"type": "vcs",
 			"url": "https://github.com/aleksip/styleguidekit-twig-default"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/aleksip/styleguidekit-assets-default"
 		}
 	],
 	"require": {
