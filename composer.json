@@ -25,7 +25,7 @@
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/drupal-pattern-lab/patternlab-php-core"
+      "url": "https://github.com/aleksip/patternlab-php-core"
     },
     {
       "type": "vcs",
@@ -42,10 +42,11 @@
   ],
 	"require": {
 		"php": ">=5.4",
-		"pattern-lab/core": "^2.0.0",
+		"pattern-lab/core": "dev-shila-drupal-theme as 2.7.0",
 		"pattern-lab/patternengine-twig": "^2.0.0",
 		"pattern-lab/styleguidekit-assets-default": "^3.0.0",
-		"pattern-lab/styleguidekit-twig-default": "^3.0.0"
+		"pattern-lab/styleguidekit-twig-default": "^3.0.0",
+		"aleksip/plugin-data-transform": "^1.0.0"
 	},
 	"scripts": {
 		"post-install-cmd": [
@@ -68,16 +69,5 @@
 		"pre-package-uninstall": [
 			"PatternLab\\Installer::prePackageUninstall"
 		]
-	},
-	"extra": {
-		"patternlab": {
-			"starterKitSuggestions": [
-				"drupal-pattern-lab/starterkit-twig-demo",
-				"drupal-pattern-lab/starterkit-twig-base"
-			],
-      "config": {
-        "overrideConfig": false
-      }
-		}
 	}
 }
