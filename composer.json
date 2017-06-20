@@ -1,8 +1,8 @@
 {
-	"name":             "pattern-lab/edition-twig-standard",
+	"name":             "drupal-pattern-lab/edition-twig-standard",
 	"description":      "Standard Edition of Pattern Lab for Twig. Installs all Twig-related assets except for a StarterKit.",
 	"keywords":         ["pattern lab"],
-	"homepage":         "http://patternlab.io",
+	"homepage":         "http://drupal-pattern-lab.github.io",
 	"license":          "MIT",
 	"type":             "project",
 	"authors": [
@@ -14,54 +14,56 @@
 		}
 	],
 	"support": {
-		"issues":         "https://github.com/pattern-lab/patternlab-php/issues",
-		"wiki":           "http://patternlab.io/docs/",
-		"source":         "https://github.com/pattern-lab/patternlab-php/releases"
+		"issues":         "https://github.com/drupal-pattern-lab/edition-php-twig-standard/issues",
+		"source":         "https://github.com/drupal-pattern-lab/edition-php-twig-standard/releases"
 	},
 	"autoload": {
 		"psr-0": {
 			"PatternLab":   "core/src/"
 		}
 	},
-	"minimum-stability": "dev",
-	"prefer-stable": true,
-	"repositories": [
-		{
-			"type": "vcs",
-			"url": "https://github.com/aleksip/patternlab-php-core"
-		},
-		{
-			"type": "vcs",
-			"url": "https://github.com/aleksip/patternengine-php-twig"
-		},
-		{
-			"type": "vcs",
-			"url": "https://github.com/aleksip/styleguidekit-twig-default"
-		},
-		{
-			"type": "vcs",
-			"url": "https://github.com/aleksip/styleguidekit-assets-default"
-		}
-	],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/drupal-pattern-lab/patternlab-php-core"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/drupal-pattern-lab/patternengine-php-twig"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/drupal-pattern-lab/styleguidekit-assets-default"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/drupal-pattern-lab/styleguidekit-twig-default"
+    }
+  ],
 	"require": {
-		"php": ">=5.3.6",
-		"pattern-lab/core": "dev-shila-drupal-theme",
-		"pattern-lab/patternengine-twig": "dev-shila-drupal-theme",
-		"pattern-lab/styleguidekit-twig-default": "dev-shila-drupal-theme",
-		"aleksip/plugin-data-transform": "dev-master"
+		"php": ">=5.4",
+		"pattern-lab/core": "^2.0.0",
+		"pattern-lab/patternengine-twig": "^2.0.0",
+		"pattern-lab/styleguidekit-assets-default": "^3.0.0",
+		"pattern-lab/styleguidekit-twig-default": "^3.0.0"
 	},
 	"scripts": {
-		"post-create-project-cmd": [
-			"PatternLab\\Installer::postCreateProjectCmd"
+		"post-install-cmd": [
+			"PatternLab\\Installer::postInstallCmd"
+		],
+		"post-update-cmd": [
+			"PatternLab\\Installer::postUpdateCmd"
+		],
+		"post-root-package-install": [
+			"PatternLab\\Installer::setProjectInstall",
+			"PatternLab\\Installer::getSuggestedStarterKits",
+			"PatternLab\\Installer::getConfigOverrides"
 		],
 		"post-package-install": [
 			"PatternLab\\Installer::postPackageInstall"
 		],
 		"post-package-update": [
 			"PatternLab\\Installer::postPackageUpdate"
-		],
-		"pre-install-cmd": [
-			"PatternLab\\Installer::preInstallCmd"
 		],
 		"pre-package-uninstall": [
 			"PatternLab\\Installer::prePackageUninstall"
@@ -70,9 +72,12 @@
 	"extra": {
 		"patternlab": {
 			"starterKitSuggestions": [
-				"pattern-lab/starterkit-twig-base",
-				"pattern-lab/starterkit-twig-demo"
-			]
+				"drupal-pattern-lab/starterkit-twig-demo",
+				"drupal-pattern-lab/starterkit-twig-base"
+			],
+      "config": {
+        "overrideConfig": false
+      }
 		}
 	}
 }
